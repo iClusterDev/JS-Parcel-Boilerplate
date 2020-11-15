@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
-    "dev": "rm -rf ./development && rm -rf ./.cache && parcel public/index.html --out-dir development -p 3000",
-    "build": "parcel build public/index.html --out-dir dist --public-url ./"
+    "clean": "rm -rf ./development && rm -rf ./.cache && rm -rf ./dist",
+    "build": "npm run clean && parcel build src/index.html --out-dir dist --public-url ./",
+    "dev": "npm run clean && parcel src/index.html --out-dir development -p 3000"
   },
   "keywords": [],
   "author": "",
