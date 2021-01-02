@@ -6,8 +6,8 @@
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "clean": "rm -rf ./development && rm -rf ./.cache && rm -rf ./public",
-    "build": "npm run clean && parcel build client/views/index.html --out-dir public --public-url ./",
-    "dev:client": "npm run clean && parcel client/views/index.html --out-dir development -p 3000"
+    "build": "npm run clean && parcel build src/views/index.html --out-dir public --public-url ./",
+    "dev:client": "npm run clean && parcel src/views/index.html --out-dir development -p 3000"
   },
   "keywords": [],
   "author": "",
